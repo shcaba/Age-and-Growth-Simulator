@@ -27,6 +27,10 @@ shinyUI(fluidPage(
                      column(width=6,numericInput("Sel_2", "P2", value=NA,min = 0.001, max = 1,step=0.01))),
             h4(p(("# of samples"))),
             fluidRow(column(width=8,numericInput("Namsps","Individuals to sample", value=200,min=1, max=10000, step=0.01))),
+            h4(p(("# of ages"))),
+            fluidRow(column(width=8,numericInput("Nage","Maximum Age", value=NA,min=1, max=200, step=1))),
+            br(),
+            fluidRow(column(width=3,offset=9,style='left: 3%',actionButton(inputId="doSim", label="Run"))),
                      
                 ),
 
